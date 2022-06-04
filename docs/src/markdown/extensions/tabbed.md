@@ -96,6 +96,48 @@ of a new tab set with `!`.
             ```
         ```
 
+If you'd like to force a tab to be selected, simply use `===+`, otherwise, the first tab will be selected by default.
+
+!!! example "Tab Select"
+
+    === "Output"
+        === "Tab 1"
+            Markdown **content**.
+
+            Multiple paragraphs.
+
+        ===+ "Tab 2"
+            More Markdown **content**.
+
+            - list item a
+            - list item b
+
+        === "Tab 3"
+            Another Tab
+
+    === "Markdown"
+        ```
+        === "Tab 1"
+            Markdown **content**.
+
+            Multiple paragraphs.
+
+        ===+ "Tab 2"
+            More Markdown **content**.
+
+            - list item a
+            - list item b
+
+        === "Tab 3"
+            Another Tab
+        ```
+
+!!! warning "Combining Tab Break and Tab Select"
+    If combining tab break with `!` and tab select with `+`, tab break should come last `+!`.
+
+!!! new "New 9.5"
+    Tab select syntax with `+` was introduced in 9.5.
+
 ## Styling with CSS
 
 In order to use tabbed blocks, some additional CSS is needed. You can check out the configuration below which will
